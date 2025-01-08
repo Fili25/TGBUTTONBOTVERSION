@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram App Buttons</title>
+    <script src="https://telegram.org/js/telegram-web-app.js?56&bot_version=6.0"></script>
+    
+
+    <script>
+        function openWithSDK() {
+            Telegram.Utils.OpenTelegramLink("https://t.me/notcoin_bot/click");
+        }
+
+        function openWithPlatform() {
+            Telegram.WebApp.openTgLink("https://t.me/notcoin_bot/click");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openWithSDK()">Open with OpenTelegramLink</button>
+    <button onclick="openWithPlatform()">Open with openTgLink</button>
+    <a href="https://t.me/notcoin_bot/click" target="_blank">
+        <button>Open via Link</button>
+    </a>
+</body>
+</html>
